@@ -16,12 +16,12 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
 
+            $table->string('code');
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('insurance_price');
             $table->bigInteger('shipping_price');
             $table->bigInteger('total_price');
             $table->string('transaction_status'); // UNPAID. PENDING, SHIPPING, SUCCESS, FAILED
-            $table->string('delivery_receipt');
 
             $table->softDeletes();
             $table->timestamps();

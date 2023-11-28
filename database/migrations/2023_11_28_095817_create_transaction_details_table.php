@@ -19,6 +19,8 @@ class CreateTransactionDetailsTable extends Migration
             $table->bigInteger('transaction_id')->unsigned();
             $table->bigInteger('product_id')->unsigned();
             $table->bigInteger('price');
+            $table->string('shipping_status'); // PENDING, SHIPPING SUCCESS
+            $table->string('delivery_receipt');
 
             $table->timestamps();
 
